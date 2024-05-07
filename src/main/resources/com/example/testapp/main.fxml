@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testapp.Controller">
+   <children>
+      <ScrollPane layoutX="168.0" layoutY="37.0" prefHeight="363.0" prefWidth="432.0" vbarPolicy="ALWAYS">
+         <content>
+            <GridPane prefHeight="954.0" prefWidth="416.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <LineChart title="ЦП" titleSide="LEFT" GridPane.rowIndex="4">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" upperBound="99.0" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart title="ОЗУ" titleSide="LEFT" GridPane.rowIndex="5">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" upperBound="99.0" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart title="HDD" titleSide="LEFT" GridPane.rowIndex="6">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" upperBound="99.0" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart title="T3" titleSide="LEFT" GridPane.rowIndex="3">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart prefHeight="134.0" prefWidth="416.0" title="T0" titleSide="LEFT">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis prefHeight="81.0" prefWidth="28.0" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart title="T1" titleSide="LEFT" GridPane.rowIndex="1">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart title="T2" titleSide="LEFT" GridPane.rowIndex="2">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <AnchorPane prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: #fff;">
+         <children>
+            <Text layoutX="14.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Целевой хост" />
+            <Button fx:id="start" layoutX="109.0" layoutY="7.0" mnemonicParsing="false" text="Старт" />
+            <ComboBox layoutX="167.0" layoutY="7.0" prefWidth="150.0" promptText="Выбор устройства" />
+            <Button fx:id="settings" layoutX="325.0" layoutY="7.0" mnemonicParsing="false" text="Настройки" />
+            <Button fx:id="load" layoutX="523.0" layoutY="7.0" mnemonicParsing="false" text="Загрузить" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutY="37.0" prefHeight="363.0" prefWidth="168.0">
+         <children>
+            <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Температура" />
+            <Text layoutX="15.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Параметры платформы" />
+            <GridPane layoutX="15.0" layoutY="23.0" prefHeight="91.0" prefWidth="130.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="17.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="T0:" textAlignment="RIGHT" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="T1:" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="T2:" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="T3:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" ____________________" GridPane.columnIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" ____________________" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" ____________________" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" ____________________" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="14.0" layoutY="139.0" prefHeight="60.0" prefWidth="130.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="31.99998779296875" minWidth="10.0" prefWidth="31.99998779296875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.19998168945312" minWidth="10.0" prefWidth="98.40001220703125" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ЦП:" textAlignment="RIGHT" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ОЗУ:" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HDD:" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" _________________" GridPane.columnIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" _________________" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" _________________" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
